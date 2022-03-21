@@ -27,6 +27,16 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/style3d.css">  
+    
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+     <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    
+    
 
 </head>
 
@@ -50,7 +60,9 @@
         <!--  <li><a href="contact.html">Contact Us</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+        
+    <!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
@@ -74,15 +86,35 @@
       <div class="row align-items-center">
         <div class="col-12 hero-text-image">
           <div class="row">
+              
+              <!-- An aside -->
+        <!-- This is for holding the 3D object -->
+        <div id="aSide">
+
+            <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the aside container -->
+            <model-viewer src="assets/3dview/NewModels/Tea%20Table01.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/3dview/NewModels/Team%">
+            </model-viewer>
+        </div>
+
+        
+              
             <div class="col-lg-8 text-center text-lg-start">
-              <h1 data-aos="fade-right">Get your fashion designs out there</h1>
+              <h1 data-aos="fade-right">Get your designs out there</h1>
               <p class="mb-5" data-aos="fade-right" data-aos-delay="100">You just work on your designs and we will get them to your customers.</p>
               <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="#" class="btn btn-outline-white">Get started</a></p>
             </div>
+              
+              
+          
+              
+            <!--
             <div class="col-lg-4 iphone-wrap">
               <img src="assets/img/phone1.png" alt="Image" class="phone-1" data-aos="fade-right">
               <img src="assets/img/phone2.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">
             </div>
+              
+              -->
           </div>
         </div>
       </div>
@@ -180,9 +212,18 @@
             <p class="mb-4">weAR removes all the hustle that's involved with finding the appropriate channel to reach your clients, you don't need to build your own website or create any sort of merchant account on other E-commerce platforms. </p>
             <p><a href="#feedback" class="btn btn-primary">Next</a></p>
           </div>
-          <div class="col-md-6" data-aos="fade-left">
-            <img src="assets/img/undraw_svg_2.svg" alt="Image" class="img-fluid">
-          </div>
+            
+             <div id="aSide">
+
+            <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the aside container -->
+            <model-viewer src="assets/3dview/NewModels/Chair/black_leather_chair.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/3dview/NewModels/Chair/black_leather_chair.gltf">
+            </model-viewer>
+        </div>
+            
+            
+            
+        
         </div>
       </div>
     </section>
@@ -198,7 +239,13 @@
             <p><a href="#cta" class="btn btn-primary">Next</a></p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="assets/img/undraw_svg_3.svg" alt="Image" class="img-fluid">
+           
+              <div id="aSide">
+              
+              <model-viewer src="assets/3dview/NewModels/Shelf/scene.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/3dview/NewModels/Shelf/scene.gltf">
+            </model-viewer>
+               </div>
+              
           </div>
         </div>
       </div>

@@ -14,5 +14,9 @@
 
   $email_body = "Name: $name\n\nEmail: $email\n\nSubject: $subject\n\nMessage:\n$message";
 
- 
+  if (mail($receiving_email_address, $subject, $email_body, $headers)) {
+    echo "success";
+  } else {
+    echo "error";
+  }
 ?>

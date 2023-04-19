@@ -139,7 +139,7 @@
       })
       .then(function (data) {
         thisForm.querySelector('.loading').classList.remove('d-block');
-        if (data.trim() == 'OK') {
+        if (data.trim() == 'Success') {
   thisForm.querySelector('.sent-message').classList.add('d-block');
   thisForm.querySelector('.sent-message').innerHTML = '';
   thisForm.reset(); 

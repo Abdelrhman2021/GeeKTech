@@ -1,10 +1,4 @@
-/**
-* Template Name: Bikin
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/bikin-free-simple-landing-page-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -138,7 +132,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 100px;
 }
 
 /*--------------------------------------------------------------
@@ -188,7 +182,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #3b4ef8;
+  color: #fbcc21;
 }
 
 .navbar .getstarted,
@@ -199,13 +193,13 @@ h6 {
   border-radius: 5px;
   font-weight: 600;
   color: #fff;
-  color: #3b4ef8;
+  color: #fbcc21;
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #3b4ef8;
+  background: #fbcc21;
 }
 
 .navbar .dropdown ul {
@@ -241,7 +235,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #3b4ef8;
+  color: #fbcc21;
 }
 
 .navbar .dropdown:hover>ul {
@@ -277,7 +271,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #2d405f;
+  color: #fbcc21;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -341,7 +335,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #3b4ef8;
+  color: #fbcc21;
 }
 
 .navbar-mobile .getstarted,
@@ -376,7 +370,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #3b4ef8;
+  color: #fbcc21;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -426,11 +420,11 @@ h6 {
   border-radius: 5px;
   transition: 0.5s;
   color: #fff;
-  background: #3b4ef8;
+  background: #077207;
 }
 
 #hero .btn-get-started:hover {
-  background: #0a22f6;
+  background: #ffc81c;
 }
 
 #hero .hero-img {

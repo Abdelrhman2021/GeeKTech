@@ -7,21 +7,17 @@ Already decided, no action needed:
 - Visual scope: this phase includes a visual refresh, not just copy/structure changes.
 - All work happens on the `electrify-redesign` branch; nothing merges to `main` until you approve.
 - Contact form backend already works (plain PHP `mail()` to `support@geektech.software`) — no backend fix needed, just adding fields.
+- **2026-07-22: Confidentiality & Data Handling rule added to the brief.** Fleet sizes, driver/user counts, trip volumes, utilization, waiting times, uptime, pricing logic, customer workflows, technical architecture, and production data are confidential by default and won't be published even when known. Only "35,000+ completed rides" is an approved figure. This already updated Sections A and C below.
 
 ---
 
-## A. Verified Metrics (do not fabricate — brief is explicit about this)
+## A. Verified Metrics (superseded by the Confidentiality rule added 2026-07-22)
 
-Only one figure is currently verified. Everything else will render as a visible placeholder until you supply a real number, or tell me to drop that stat entirely.
+The brief now treats fleet size, driver counts, active-user counts, trip volumes, uptime, and response-time figures as **confidential by default — not to be published even when known internally**. So this section is no longer a data request; it's just confirming scope:
 
-- [ ] Somabay: number of vehicles
-- [ ] Somabay: number of drivers
-- [ ] Somabay: number of active/registered users
-- [ ] Somabay: platform uptime %
-- [ ] Somabay: monthly ride volume (if different from the 35,000+ total)
-- [ ] Somabay: any response-time / operational-improvement % worth citing
-- [ ] Confirmed: **35,000+ completed rides** ✅ (already verified, will be used as-is)
-- [ ] Any other real customer/deployment besides Somabay to feature?
+- [x] Confirmed: **35,000+ completed rides** is the only approved figure, subject to final customer approval — used as-is.
+- [ ] Any other real customer/deployment besides Somabay you want featured (name only, no operational figures)?
+- [ ] Any qualitative phrasing you'd prefer for fleet/driver/user scale (e.g. "a growing fleet across Somabay," "a dedicated driver network") vs. omitting those stats from the trust section entirely?
 
 ## B. Logos & Permissions
 
@@ -31,13 +27,11 @@ Only one figure is currently verified. Everything else will render as a visible 
 
 ## C. Product Screenshots (for hero, platform overview, architecture visual)
 
-None currently exist in the repo. Pick one per item:
+Updated per the Confidentiality rule: real screenshots would likely expose customer workflows, production data, or technical architecture, so **generic sanitized mockups are the default for this phase**, not a real-vs-placeholder choice.
 
-- [ ] Live fleet map — real screenshot, or generic/mockup placeholder for now?
-- [ ] Operations dashboard — real screenshot, or placeholder?
-- [ ] Driver app — real screenshot, or placeholder?
-- [ ] Passenger app / booking flow — real screenshot, or placeholder?
-- [ ] If any of these products don't actually exist yet in built form, say so — changes what "placeholder" should look like (mockup vs. "coming soon" treatment).
+- [ ] Confirm: generic mockups (fleet map, dashboard, driver app, passenger app) with fictional/demo data are fine to build/commission for this phase?
+- [ ] If Electrify already has clean, pre-sanitized demo screenshots (no real customer/driver/location data visible) that you're comfortable publishing, flag which ones — otherwise we treat all product visuals as mockups.
+- [ ] If any of these products don't exist yet in built form, say so — affects whether we present them as "the platform" or as a "coming soon" capability.
 
 ## D. Visual Design Direction (since this phase includes a refresh, not just reuse)
 

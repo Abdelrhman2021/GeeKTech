@@ -1723,7 +1723,7 @@ section {
   margin-bottom: 18px;
 }
 
-.mc-card h4 {
+.mc-card h3 {
   font-size: 19px;
   font-weight: 700;
   color: var(--mc-ink);
@@ -1836,7 +1836,7 @@ section {
   margin: 0 auto 16px;
 }
 
-.step-card h4 {
+.step-card h3 {
   font-size: 17px;
   font-weight: 700;
   color: var(--mc-ink);

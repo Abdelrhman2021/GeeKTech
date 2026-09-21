@@ -1540,3 +1540,80 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Operations Dashboard (inner page)
+--------------------------------------------------------------*/
+.dashboard-note {
+  max-width: 640px;
+  margin: 14px auto 0;
+  font-size: 14px;
+  text-align: center;
+  color: #5f7c78;
+}
+
+.dashboard-shot {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.dashboard-shot:hover {
+  box-shadow: 0 0 29px 0 rgba(27, 188, 163, 0.28);
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.app-links .app-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
+  padding: 10px 26px;
+  border-radius: 8px;
+  background: #2b3836;
+  color: #fff;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-links .app-btn i {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.app-links .app-btn small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.app-links .app-btn:hover {
+  background: #1bbca3;
+  color: #fff;
+}

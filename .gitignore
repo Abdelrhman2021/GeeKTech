@@ -2,3 +2,6 @@
 *.zip
 debug.log
 .dist/
+
+# Unredacted product screenshots (contain real driver/production data) - sanitized copies live in Electrify/assets/img/dashboard
+Electrify/Screenshots/

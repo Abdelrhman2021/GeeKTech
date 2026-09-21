@@ -1158,8 +1158,8 @@ section {
 # Our Team
 --------------------------------------------------------------*/
 .team {
-  background: #fff;
-  padding: 60px 0;
+  background: #f2f5f4;
+  padding: 90px 0;
 }
 
 .team .member {
@@ -1168,10 +1168,12 @@ section {
   background: #343a40;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .team .member .member-info {
-  opacity: 0;
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.35) 28%, rgba(0, 0, 0, 0) 55%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1184,11 +1186,11 @@ section {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 14px;
   transition: bottom 0.4s;
 }
 
-.team .member .member-info-content h4 {
+.team .member .member-info-content h3 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
@@ -1228,18 +1230,21 @@ section {
   margin: 0 2px;
 }
 
-.team .member:hover .member-info {
+.team .member:hover .member-info,
+.team .member:focus-within .member-info {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
   opacity: 1;
   transition: 0.4s;
 }
 
-.team .member:hover .member-info-content {
+.team .member:hover .member-info-content,
+.team .member:focus-within .member-info-content {
   bottom: 60px;
   transition: bottom 0.4s;
 }
 
-.team .member:hover .social {
+.team .member:hover .social,
+.team .member:focus-within .social {
   bottom: 0;
   transition: bottom ease-in-out 0.4s;
 }

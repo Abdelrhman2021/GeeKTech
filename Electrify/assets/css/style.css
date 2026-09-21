@@ -358,7 +358,7 @@ h6 {
 
 #hero .carousel-item::before {
   content: "";
-  background-color: rgba(21, 27, 26, 0.7);
+  background: linear-gradient(180deg, rgba(15, 20, 19, 0.35) 0%, rgba(15, 20, 19, 0.55) 55%, rgba(15, 20, 19, 0.82) 100%);
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -385,9 +385,10 @@ h6 {
 
 #hero h2 {
   color: #fff;
-  margin-bottom: 30px;
-  font-size: 48px;
+  margin-bottom: 18px;
+  font-size: 54px;
   font-weight: 700;
+  line-height: 1.15;
 }
 
 #hero p {
@@ -489,7 +490,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 90px 0;
 }
 
 .section-bg {
@@ -502,17 +503,20 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  text-transform: none;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
   padding-bottom: 0;
-  color: #4b605c;
+  color: #334240;
 }
 
 .section-title p {
-  margin-bottom: 0;
-  color: #5f7c78;
+  margin: 0 auto;
+  max-width: 640px;
+  color: #52706b;
+  font-size: 16px;
 }
 
 /*--------------------------------------------------------------
@@ -1616,4 +1620,258 @@ section {
 .app-links .app-btn:hover {
   background: #1bbca3;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Redesign — shared components (eyebrow, cards, trust stat,
+# architecture diagram, step cards, buttons, nav CTA, chips,
+# reduced motion)
+--------------------------------------------------------------*/
+:root {
+  --mc-teal: #1bbca3;
+  --mc-teal-dark: #0d8471;
+  --mc-teal-darker: #0a6d5d;
+  --mc-ink: #334240;
+  --mc-body: #52706b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.navbar .nav-cta {
+  background: var(--mc-teal-dark);
+  color: #fff !important;
+  padding: 8px 20px !important;
+  border-radius: 50px;
+  margin-left: 6px;
+}
+
+.navbar .nav-cta:hover {
+  background: var(--mc-teal-darker);
+}
+
+.mc-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 25px;
+  background: var(--mc-teal-dark);
+  border: 2px solid var(--mc-teal-dark);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.mc-btn:hover {
+  background: var(--mc-teal-darker);
+  border-color: var(--mc-teal-darker);
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #56e7d0;
+  margin-bottom: 16px;
+}
+
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.mc-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 32px 26px;
+  box-shadow: 0 10px 30px rgba(21, 27, 26, 0.06);
+  border-top: 3px solid var(--mc-teal);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(21, 27, 26, 0.12);
+}
+
+.mc-card .mc-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eafaf7;
+  color: var(--mc-teal-dark);
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.mc-card h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--mc-ink);
+  margin-bottom: 10px;
+}
+
+.mc-card p {
+  font-size: 14.5px;
+  color: var(--mc-body);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.mc-card--muted {
+  opacity: 0.85;
+}
+
+.mc-card-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mc-teal-dark);
+}
+
+.mc-card-link:hover {
+  color: var(--mc-teal-darker);
+  text-decoration: underline;
+}
+
+.trust-stat {
+  text-align: center;
+}
+
+.trust-figure {
+  font-family: "Poppins", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--mc-teal-dark);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.trust-label {
+  font-size: 15px;
+  color: var(--mc-body);
+}
+
+.arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto 0;
+  max-width: 900px;
+}
+
+.arch-node {
+  background: #fff;
+  border: 1px solid #e6eceb;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--mc-ink);
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(21, 27, 26, 0.05);
+}
+
+.arch-node--accent {
+  background: var(--mc-teal-dark);
+  color: #fff;
+  border-color: var(--mc-teal-dark);
+}
+
+.arch-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.arch-connector {
+  width: 2px;
+  height: 28px;
+  background: #b7d6d1;
+  margin: 4px 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.step-card {
+  text-align: center;
+  padding: 10px;
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  background: var(--mc-teal-dark);
+  color: #fff;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+.step-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--mc-ink);
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: var(--mc-body);
+  line-height: 1.7;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 20px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li {
+  background: #fff;
+  border: 1px solid #d5e5e2;
+  border-radius: 50px;
+  padding: 8px 18px;
+  font-size: 14.5px;
+  color: var(--mc-ink);
+}
+
+@media (max-width: 768px) {
+  .arch-row {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -25,7 +25,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Fraunces:opsz,wght@9..144,380;9..144,480;9..144,600" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -81,7 +81,6 @@
           <div class="carousel-item active" style="background-image: url(assets/img/slide/Slide1.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <span class="eyebrow animate__animated animate__fadeInDown">Private Mobility, Reimagined</span>
                 <h2 class="animate__animated animate__fadeInDown">The operating system for private mobility.</h2>
                 <p class="animate__animated animate__fadeInUp">Run your transportation network through one connected platform — built for destinations that operate their own vehicles and drivers.</p>
                 <a href="#platform" class="btn-get-started animate__animated animate__fadeInUp scrollto">Discover Electrify</a>
@@ -93,7 +92,6 @@
           <div class="carousel-item" style="background-image: url(assets/img/slide/Slide2.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <span class="eyebrow animate__animated animate__fadeInDown">One Platform. Every Journey.</span>
                 <h2 class="animate__animated animate__fadeInDown">Run the whole network from one place.</h2>
                 <p class="animate__animated animate__fadeInUp">Passengers, drivers, dispatch, fleet, payments and operational data — connected in real time.</p>
                 <a href="#platform" class="btn-get-started animate__animated animate__fadeInUp scrollto">Explore the Platform</a>
@@ -105,7 +103,6 @@
           <div class="carousel-item" style="background-image: url(assets/img/slide/Slide3.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <span class="eyebrow animate__animated animate__fadeInDown">Built for What Comes Next</span>
                 <h2 class="animate__animated animate__fadeInDown">Smarter mobility. Ready for electric.</h2>
                 <p class="animate__animated animate__fadeInUp">Start with better mobility operations today, then integrate electric fleets, charging, batteries and connected infrastructure as your network evolves.</p>
                 <a href="#contact" class="btn-get-started animate__animated animate__fadeInUp scrollto">Build Your Network</a>
@@ -131,18 +128,24 @@
     <!-- ======= Trust / Proof Section ======= -->
     <section id="trust" class="section-bg">
       <div class="container">
-        <div class="section-title">
-          <h2>Built for Real-World Mobility Operations</h2>
-          <p>Electrify powers SomaRide at Somabay, supporting private mobility across a large, self-contained Red Sea destination and providing the operational learning behind our scalable mobility platform.</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6 trust-stat mb-4 mb-md-0">
-            <div class="trust-figure">70,000+</div>
-            <div class="trust-label">Completed rides</div>
+        <div class="row align-items-end gy-4">
+          <div class="col-lg-7">
+            <div class="section-title">
+              <h2>Built for Real-World Mobility Operations</h2>
+              <p>Electrify powers SomaRide at Somabay, supporting private mobility across a large, self-contained Red Sea destination and providing the operational learning behind our scalable mobility platform.</p>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 trust-stat">
-            <div class="trust-figure">10M m²</div>
-            <div class="trust-label">Live deployment across a self-contained destination</div>
+          <div class="col-lg-5">
+            <div class="row">
+              <div class="col-6 trust-stat">
+                <div class="trust-figure">70,000+</div>
+                <div class="trust-label">Completed rides</div>
+              </div>
+              <div class="col-6 trust-stat">
+                <div class="trust-figure">10M m²</div>
+                <div class="trust-label">Self-contained destination</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -176,44 +179,57 @@
           <p>One connected platform for passengers, drivers, dispatch, fleet operations, payments, and the data that ties it all together.</p>
         </div>
 
-        <div class="mc-grid">
-          <div class="mc-card">
-            <div class="mc-icon" aria-hidden="true"><i class="bi bi-phone"></i></div>
-            <h3>Passenger App</h3>
-            <p>A fully branded passenger experience for requesting rides, tracking vehicles, managing payments, receiving notifications, and accessing destination-specific mobility services.</p>
-          </div>
-          <div class="mc-card">
-            <div class="mc-icon" aria-hidden="true"><i class="bi bi-person-badge"></i></div>
-            <h3>Driver App</h3>
-            <p>Dedicated tools that help drivers receive trips, navigate, manage ride status, communicate with passengers, and follow operational workflows.</p>
-          </div>
-          <div class="mc-card">
+        <div class="platform-layout">
+          <div class="mc-card mc-card--feature">
             <div class="mc-icon" aria-hidden="true"><i class="bi bi-display"></i></div>
             <h3>Operations Dashboard</h3>
-            <p>A central control center for monitoring and managing vehicles, drivers, trips, demand, service quality, and daily mobility operations.</p>
-            <a class="mc-card-link" href="operations-dashboard.html">See the dashboard <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <p>A central control center for monitoring and managing vehicles, drivers, trips, demand, service quality, and daily mobility operations — the console operators actually run each day.</p>
+            <a class="mc-card-link" href="operations-dashboard.html">See the dashboard</a>
           </div>
-          <div class="mc-card">
-            <div class="mc-icon" aria-hidden="true"><i class="bi bi-graph-up"></i></div>
-            <h3>Fleet Intelligence</h3>
-            <p>Operational insight into utilization, demand, downtime, performance, and service quality across the network.</p>
-          </div>
-          <div class="mc-card">
-            <div class="mc-icon" aria-hidden="true"><i class="bi bi-credit-card"></i></div>
-            <h3>Payments &amp; Revenue</h3>
-            <p>Payment and revenue tools designed for private mobility environments — cards, wallets, ride packages, and reconciliation.</p>
-          </div>
-          <div class="mc-card">
-            <div class="mc-icon" aria-hidden="true"><i class="bi bi-plug"></i></div>
-            <h3>Integrations &amp; APIs</h3>
-            <p>Connect Electrify with the destination's existing software, infrastructure, and mobility ecosystem.</p>
-          </div>
-          <div class="mc-card">
-            <div class="mc-icon" aria-hidden="true"><i class="bi bi-lightning-charge"></i></div>
-            <h3>EV, Battery &amp; IoT</h3>
-            <p>Extend the mobility operating layer to electric fleets, charging networks, battery systems, and connected infrastructure.</p>
+          <div class="platform-pair">
+            <div class="mc-card mc-card--compact">
+              <div class="mc-icon" aria-hidden="true"><i class="bi bi-phone"></i></div>
+              <h3>Passenger App</h3>
+              <p>A fully branded passenger experience for requesting rides, tracking vehicles, managing payments, and accessing destination-specific mobility services.</p>
+            </div>
+            <div class="mc-card mc-card--compact">
+              <div class="mc-icon" aria-hidden="true"><i class="bi bi-person-badge"></i></div>
+              <h3>Driver App</h3>
+              <p>Dedicated tools that help drivers receive trips, navigate, manage ride status, and communicate with passengers.</p>
+            </div>
           </div>
         </div>
+
+        <ul class="platform-list">
+          <li class="platform-list-item">
+            <i class="bi bi-graph-up" aria-hidden="true"></i>
+            <div>
+              <h3>Fleet Intelligence</h3>
+              <p>Operational insight into utilization, demand, downtime, performance, and service quality across the network.</p>
+            </div>
+          </li>
+          <li class="platform-list-item">
+            <i class="bi bi-credit-card" aria-hidden="true"></i>
+            <div>
+              <h3>Payments &amp; Revenue</h3>
+              <p>Payment and revenue tools designed for private mobility environments — cards, wallets, ride packages, and reconciliation.</p>
+            </div>
+          </li>
+          <li class="platform-list-item">
+            <i class="bi bi-plug" aria-hidden="true"></i>
+            <div>
+              <h3>Integrations &amp; APIs</h3>
+              <p>Connect Electrify with the destination's existing software, infrastructure, and mobility ecosystem.</p>
+            </div>
+          </li>
+          <li class="platform-list-item">
+            <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+            <div>
+              <h3>EV, Battery &amp; IoT</h3>
+              <p>Extend the mobility operating layer to electric fleets, charging networks, battery systems, and connected infrastructure.</p>
+            </div>
+          </li>
+        </ul>
 
       </div>
     </section><!-- End Platform Overview Section -->
@@ -505,7 +521,7 @@
     <!-- ======= About Section ======= -->
     <section id="about">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title text-center mx-auto">
           <h2>About Electrify</h2>
         </div>
         <div class="row justify-content-center">

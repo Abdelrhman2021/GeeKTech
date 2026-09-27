@@ -1901,6 +1901,15 @@ section {
   margin-bottom: 8px;
 }
 
+/* Reserved for the Somabay proof point in the Case Study section — the
+   one number on the page that earns a different color from the rest of
+   the (teal-led) system. Not a general-purpose accent; do not reuse
+   --clay elsewhere without deliberate reason. */
+.trust-figure--proof {
+  font-size: 44px;
+  color: var(--clay);
+}
+
 .trust-label {
   font-size: 15px;
   color: var(--body-text);

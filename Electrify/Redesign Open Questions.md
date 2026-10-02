@@ -105,3 +105,9 @@ Once these changes are complete:
 **Electrify is a vehicle-agnostic Mobility OS for destinations and private mobility networks, expanding toward an Energy OS as those fleets electrify.**
 
 Do not reposition Electrify as a battery-swapping company, scooter company, golf-cart company, or ride-hailing operator.
+
+---
+
+## Addendum (2026-10-02): visual direction superseded
+
+The editorial teal/clay look described above (sections 4 and related) was replaced by a dark neon-tech theme at the founder's request. Colours now follow `Electrify Branding File.pdf` (green `#29B473`, blue `#05668D`, yellow `#F3C316`, red-orange `#CE4727`, brown `#633D2C`, black). The "`--clay` as a rare accent" rule now applies to brand yellow, which is used only for the case-study proof stat. Implemented as an override layer in `assets/css/futuristic.css` and `assets/js/futuristic.js`; positioning and copy decisions above are unchanged.

@@ -116,10 +116,17 @@ a:hover { color: var(--b-green-soft); }
 /*--------------------------------------------------------------
 # Header — floating glass pill
 --------------------------------------------------------------*/
-#header {
-  background: rgba(0, 0, 0, 0.35) !important;
+/* NB: backdrop-filter on #header itself would make it the containing block for
+   the position:fixed mobile menu (.navbar-mobile) and trap it inside the 70px
+   bar, so the blur lives on a pseudo-element instead. */
+#header:not(.fixed-top) { position: relative; }
+#header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
+}
+#header {
+  background: rgba(0, 0, 0, 0.35) !important;
   box-shadow: none !important;
   border-bottom: 1px solid var(--fx-border);
   transition: background 0.4s, height 0.4s, border-color 0.4s;
@@ -604,3 +611,13 @@ html.fx .reveal.in.platform-list-item:hover, html.fx .reveal.in.member:hover { t
   border: 7px solid transparent !important; background-clip: padding-box !important;
   box-shadow: inset 0 0 0 1px var(--fx-border) !important; border-radius: 30px !important;
 }
+
+/* Mobile menu panel */
+.navbar-mobile { z-index: 1000; }
+.navbar-mobile .mobile-nav-toggle { z-index: 2; top: 18px; right: 18px; font-size: 32px; }
+.navbar-mobile ul { top: 70px !important; bottom: auto !important; max-height: calc(100vh - 90px); padding: 14px 8px !important; }
+.navbar-mobile > ul > li > a:not(.nav-cta)::after { display: none; }
+.navbar-mobile a, .navbar-mobile a:focus { padding: 14px 20px !important; font-size: 17px; border-radius: 16px; }
+.navbar-mobile a:hover, .navbar-mobile a.active { background: rgba(41, 180, 115, 0.12); }
+.navbar-mobile .nav-cta { margin: 12px 12px 6px !important; justify-content: center; border-radius: 999px !important; }
+.navbar-mobile .nav-cta:hover { background: var(--fx-grad) !important; }

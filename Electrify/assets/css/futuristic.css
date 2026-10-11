@@ -621,3 +621,9 @@ html.fx .reveal.in.platform-list-item:hover, html.fx .reveal.in.member:hover { t
 .navbar-mobile a:hover, .navbar-mobile a.active { background: rgba(41, 180, 115, 0.12); }
 .navbar-mobile .nav-cta { margin: 12px 12px 6px !important; justify-content: center; border-radius: 999px !important; }
 .navbar-mobile .nav-cta:hover { background: var(--fx-grad) !important; }
+
+/* Mobile hero: keep slide indicators clear of the CTA button */
+@media (max-width: 768px) {
+  #hero .carousel-container { padding-bottom: 88px; }
+  #hero .carousel-indicators { margin-bottom: 28px; }
+}

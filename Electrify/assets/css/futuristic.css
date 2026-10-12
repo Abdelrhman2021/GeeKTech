@@ -19,7 +19,7 @@
   --b-black: #000;
 
   /* Theme tokens: light-dark(<light>, <dark>) resolves from `color-scheme`, which
-     follows the visitor's system setting. Hero, CTA band, footer and team cards are
+     is pinned to dark on <html> below. Hero, CTA band, footer and team cards are
      pinned to dark below because they sit on photos / dark gradients. */
   --fx-bg: light-dark(#f2f7f4, #000);
   --fx-text: light-dark(#0a1a12, #eaf5ef);
@@ -67,7 +67,9 @@
   --mc-body: var(--fx-muted);
 }
 
-html { scroll-behavior: smooth; color-scheme: light dark; }
+/* Site is dark-only. The light-dark() tokens above still carry a light palette;
+   change this to `color-scheme: light dark` to follow the system again. */
+html { scroll-behavior: smooth; color-scheme: dark; }
 /* Always-dark surfaces (photo / gradient backed) */
 #hero, .cta, #footer, .member { color-scheme: dark; }
 

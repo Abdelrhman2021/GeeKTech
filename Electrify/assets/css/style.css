@@ -4,16 +4,17 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #334240;
+  color: var(--body-text);
+  background: var(--sand);
 }
 
 a {
   text-decoration: none;
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 a:hover {
-  color: #2ae0c4;
+  color: var(--sea-deep);
   text-decoration: none;
 }
 
@@ -23,7 +24,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Fraunces", "Georgia", serif;
+  font-optical-sizing: auto;
+  color: var(--ink);
 }
 
 /*--------------------------------------------------------------
@@ -36,7 +39,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #1bbca3;
+  background: var(--sea);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -50,7 +53,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #21dfc2;
+  background: var(--sea-light);
   color: #fff;
 }
 
@@ -80,7 +83,7 @@ h6 {
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: #425451;
+  color: var(--ink);
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -124,14 +127,12 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #637f7b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
   white-space: nowrap;
   transition: 0.3s;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
 }
 
 .navbar a i,
@@ -145,12 +146,12 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #1bbca3;
+  background: var(--sea);
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
@@ -160,7 +161,7 @@ h6 {
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #1ed2b6;
+  background: var(--sea-light);
 }
 
 .navbar .dropdown ul {
@@ -196,7 +197,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .navbar .dropdown:hover>ul {
@@ -232,7 +233,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #58716d;
+  color: var(--body-text);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -289,13 +290,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #58716d;
+  color: var(--body-text);
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .navbar-mobile .getstarted,
@@ -330,7 +331,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -342,7 +343,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   background-color: rgba(21, 27, 26, 0.7);
   overflow: hidden;
   padding: 0;
@@ -350,7 +351,7 @@ h6 {
 
 #hero .carousel-item {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -358,9 +359,9 @@ h6 {
 
 #hero .carousel-item::before {
   content: "";
-  background-color: rgba(21, 27, 26, 0.7);
+  background: linear-gradient(180deg, rgba(15, 20, 19, 0.35) 0%, rgba(15, 20, 19, 0.55) 55%, rgba(15, 20, 19, 0.82) 100%);
   position: absolute;
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100%;
   top: 0;
   right: 0;
@@ -370,31 +371,39 @@ h6 {
 
 #hero .carousel-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  padding: 0 6% 9% 6%;
 }
 
 #hero .carousel-content {
-  text-align: center;
+  text-align: left;
+  max-width: 620px;
 }
 
 #hero h2 {
   color: #fff;
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 52px;
+  font-weight: 600;
+  font-family: "Fraunces", "Georgia", serif;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
 }
 
 #hero p {
-  width: 80%;
+  width: 100%;
+  max-width: 480px;
   animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
-  color: #fff;
+  margin: 0 0 30px 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 #hero .carousel-inner .carousel-item {
@@ -442,28 +451,35 @@ h6 {
   opacity: 1;
 }
 
+#hero .carousel-indicators {
+  justify-content: flex-start;
+  padding: 0 6%;
+  margin-bottom: 32px;
+}
+
 #hero .carousel-indicators .active {
-  background-color: #1bbca3;
+  background-color: var(--sea);
 }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.2px;
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
+  padding: 13px 26px;
+  border-radius: 3px;
+  transition: 0.25s;
   line-height: 1;
-  margin: 10px;
-  color: #fff;
+  margin: 0;
+  color: var(--ink);
   animation-delay: 0.8s;
-  border: 2px solid #1bbca3;
+  background: #fff;
+  border: none;
 }
 
 #hero .btn-get-started:hover {
-  background: #1bbca3;
+  background: var(--sea);
   color: #fff;
   text-decoration: none;
 }
@@ -489,30 +505,43 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 90px 0;
 }
 
 .section-bg {
-  background-color: #f2f5f4;
+  background-color: var(--sand-deep);
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   padding-bottom: 30px;
+  max-width: 640px;
 }
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+  margin-bottom: 14px;
   padding-bottom: 0;
-  color: #4b605c;
+  color: var(--ink);
 }
 
 .section-title p {
-  margin-bottom: 0;
-  color: #5f7c78;
+  margin: 0;
+  max-width: 560px;
+  color: var(--body-text);
+  font-size: 16.5px;
+  line-height: 1.6;
+}
+
+.section-title.text-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------
@@ -520,7 +549,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background-color: #f2f5f4;
+  background-color: var(--sand-deep);
   min-height: 40px;
 }
 
@@ -569,7 +598,7 @@ section {
 .about .content h3 {
   font-weight: 500;
   font-size: 24px;
-  color: #58716d;
+  color: var(--body-text);
   font-family: "Poppins", sans-serif;
 }
 
@@ -585,7 +614,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .about .content p:last-child {
@@ -605,7 +634,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #58716d;
+  color: var(--body-text);
 }
 
 .about .progress .skill .val {
@@ -621,7 +650,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #1bbca3;
+  background-color: var(--sea);
 }
 
 /*--------------------------------------------------------------
@@ -637,7 +666,7 @@ section {
 .counts .count-box i {
   display: block;
   font-size: 34px;
-  color: #1bbca3;
+  color: var(--sea);
   float: left;
   line-height: 0;
 }
@@ -647,7 +676,7 @@ section {
   line-height: 24px;
   display: block;
   font-weight: 700;
-  color: #58716d;
+  color: var(--body-text);
   margin-left: 50px;
 }
 
@@ -700,7 +729,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #1bbca3;
+  background: var(--sea);
   right: 0;
   top: 0;
   width: 100%;
@@ -716,7 +745,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #1bbca3;
+  background: var(--sea);
   transition: all 0.3s ease-in-out;
 }
 
@@ -733,7 +762,7 @@ section {
 }
 
 .services .title a {
-  color: #425451;
+  color: var(--ink);
 }
 
 .services .description {
@@ -752,7 +781,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 /*--------------------------------------------------------------
@@ -764,6 +793,7 @@ section {
   padding: 60px 0;
 }
 
+.cta h2,
 .cta h3 {
   color: #fff;
   font-size: 28px;
@@ -775,22 +805,23 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 15.5px;
+  letter-spacing: 0.1px;
   display: inline-block;
-  padding: 8px 28px;
-  border-radius: 25px;
-  transition: 0.5s;
+  padding: 12px 28px;
+  border-radius: 3px;
+  transition: 0.2s;
   margin-top: 10px;
-  border: 2px solid #1bbca3;
-  color: #fff;
+  background: #fff;
+  border: none;
+  color: var(--ink);
 }
 
 .cta .cta-btn:hover {
-  background: #1bbca3;
-  border: 2px solid #1bbca3;
+  background: var(--sea-light);
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -813,23 +844,23 @@ section {
 .more-services .card-title a {
   font-weight: 600;
   font-size: 18px;
-  color: #334240;
+  color: var(--ink);
   transition: ease-in-out 0.3s;
 }
 
 .more-services .card-title a:hover {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .more-services .btn {
   border-radius: 50px;
   padding: 4px 30px 6px 30px;
-  border: 2px solid #1bbca3;
+  border: 2px solid var(--sea);
 }
 
 .more-services .btn:hover {
   color: #fff;
-  background: #1bbca3;
+  background: var(--sea);
 }
 
 /*--------------------------------------------------------------
@@ -895,7 +926,7 @@ section {
 }
 
 .info-box .accordion-list a:hover {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .info-box .accordion-list span {
@@ -926,7 +957,7 @@ section {
 }
 
 .info-box .accordion-list a.collapsed:hover {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .info-box .accordion-list a.collapsed .icon-show {
@@ -987,14 +1018,14 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #334240;
+  color: var(--ink);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1106,11 +1137,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #1bbca3;
+  border: 1px solid var(--sea);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #1bbca3;
+  background-color: var(--sea);
 }
 
 .portfolio-details .portfolio-info {
@@ -1154,8 +1185,8 @@ section {
 # Our Team
 --------------------------------------------------------------*/
 .team {
-  background: #fff;
-  padding: 60px 0;
+  background: var(--sand-deep);
+  padding: 90px 0;
 }
 
 .team .member {
@@ -1164,10 +1195,12 @@ section {
   background: #343a40;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .team .member .member-info {
-  opacity: 0;
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 30%, rgba(0, 0, 0, 0) 60%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1180,11 +1213,10 @@ section {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
-  transition: bottom 0.4s;
+  bottom: 52px;
 }
 
-.team .member .member-info-content h4 {
+.team .member .member-info-content h3 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
@@ -1201,10 +1233,9 @@ section {
 .team .member .social {
   position: absolute;
   left: 0;
-  bottom: -38px;
+  bottom: 14px;
   right: 0;
-  height: 48px;
-  transition: bottom ease-in-out 0.4s;
+  height: 24px;
   text-align: center;
 }
 
@@ -1216,28 +1247,12 @@ section {
 }
 
 .team .member .social a:hover {
-  color: #1bbca3;
+  color: var(--sea);
 }
 
 .team .member .social i {
   font-size: 18px;
   margin: 0 2px;
-}
-
-.team .member:hover .member-info {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
-  opacity: 1;
-  transition: 0.4s;
-}
-
-.team .member:hover .member-info-content {
-  bottom: 60px;
-  transition: bottom 0.4s;
-}
-
-.team .member:hover .social {
-  bottom: 0;
-  transition: bottom ease-in-out 0.4s;
 }
 
 /*--------------------------------------------------------------
@@ -1251,7 +1266,7 @@ section {
 .contact .info {
   padding: 60px;
   background: #fff;
-  color: #334240;
+  color: var(--ink);
   text-align: center;
   box-shadow: -5px -5px 40px 0 rgba(0, 0, 0, 0.1);
 }
@@ -1262,7 +1277,7 @@ section {
   margin-bottom: 15px;
 }
 
-.contact .info h4 {
+.contact .info h3 {
   padding: 0;
   margin: 0 0 10px 0;
   font-size: 16px;
@@ -1335,7 +1350,7 @@ section {
 .contact .php-email-form label {
   font-family: "Poppins", sans-serif;
   margin-bottom: 5px;
-  color: #5f7c78;
+  color: var(--body-text);
 }
 
 .contact .php-email-form input,
@@ -1347,7 +1362,7 @@ section {
 
 .contact .php-email-form input::focus,
 .contact .php-email-form textarea::focus {
-  background-color: #1bbca3;
+  background-color: var(--sea);
 }
 
 .contact .php-email-form input {
@@ -1360,14 +1375,14 @@ section {
 
 .contact .php-email-form button[type=submit] {
   background: #fff;
-  border: 2px solid #1bbca3;
+  border: 2px solid var(--sea);
   padding: 10px 24px;
-  color: #1bbca3;
+  color: var(--sea);
   transition: 0.4s;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #1bbca3;
+  background: var(--sea);
   color: #fff;
 }
 
@@ -1397,7 +1412,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #344341;
+  background: var(--ink);
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1432,7 +1447,7 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #58716d;
+  background: var(--body-text);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1445,7 +1460,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #1bbca3;
+  background: var(--sea);
   color: #fff;
   text-decoration: none;
 }
@@ -1519,7 +1534,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1bbca3;
+  background: var(--sea);
   color: #fff;
   transition: 0.3s;
   border-radius: 4;
@@ -1539,4 +1554,462 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Operations Dashboard (inner page)
+--------------------------------------------------------------*/
+.dashboard-note {
+  max-width: 640px;
+  margin: 14px auto 0;
+  font-size: 14px;
+  text-align: center;
+  color: var(--body-text);
+}
+
+.dashboard-shot {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.dashboard-shot:hover {
+  box-shadow: 0 0 29px 0 rgba(27, 188, 163, 0.28);
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.app-links .app-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
+  padding: 10px 26px;
+  border-radius: 8px;
+  background: #2b3836;
+  color: #fff;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-links .app-btn i {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.app-links .app-btn small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.app-links .app-btn:hover {
+  background: var(--sea);
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Redesign — shared components (eyebrow, cards, trust stat,
+# architecture diagram, step cards, buttons, nav CTA, chips,
+# reduced motion)
+--------------------------------------------------------------*/
+:root {
+  /* Palette sampled from the destination photography in the hero —
+     warm stone/sand, deep Red Sea teal, one golden-hour clay accent —
+     rather than a default SaaS blue/teal-on-white system. */
+  --ink: #23302b;
+  --sand: #f6f1e6;
+  --sand-deep: #ece2cc;
+  --sea: #0f6f5c;
+  --sea-deep: #0a5347;
+  --clay: #b5592e;
+  --line: #ded2b3;
+  --body-text: #4c5850;
+
+  /* Back-compat aliases: existing rules below still reference these */
+  --mc-teal: var(--sea);
+  --mc-teal-dark: var(--sea);
+  --mc-teal-darker: var(--sea-deep);
+  --mc-ink: var(--ink);
+  --mc-body: var(--body-text);
+  --sea-light: #3d9484;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.navbar .nav-cta {
+  background: var(--sea);
+  color: #fff !important;
+  padding: 9px 18px !important;
+  border-radius: 3px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.navbar .nav-cta:hover {
+  background: var(--sea-deep);
+}
+
+.mc-btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 15.5px;
+  letter-spacing: 0.1px;
+  display: inline-block;
+  padding: 11px 26px;
+  border-radius: 3px;
+  background: var(--sea);
+  border: 1px solid var(--sea);
+  color: #fff;
+  transition: 0.2s;
+}
+
+.mc-btn:hover {
+  background: var(--sea-deep);
+  border-color: var(--sea-deep);
+  color: #fff;
+}
+
+
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.mc-card {
+  background: #fff;
+  border-radius: 2px;
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+}
+
+.mc-card .mc-icon {
+  display: block;
+  color: var(--sea);
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.mc-card h3 {
+  font-family: "Fraunces", "Georgia", serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.mc-card p {
+  font-size: 14.5px;
+  color: var(--body-text);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.mc-card--muted {
+  background: transparent;
+  border-style: dashed;
+}
+
+.mc-card--muted .mc-icon {
+  color: var(--body-text);
+}
+
+.mc-card-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sea);
+  border-bottom: 1px solid transparent;
+}
+
+.mc-card-link:hover {
+  color: var(--sea-deep);
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+
+.platform-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.mc-card--feature {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 36px;
+}
+
+.mc-card--feature .mc-icon {
+  font-size: 26px;
+}
+
+.mc-card--feature h3 {
+  font-size: 24px;
+}
+
+.mc-card--feature p {
+  font-size: 15.5px;
+  max-width: 42ch;
+}
+
+.platform-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mc-card--compact {
+  flex: 1;
+  padding: 22px 24px;
+}
+
+.mc-card--compact .mc-icon {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.mc-card--compact h3 {
+  font-size: 16.5px;
+  margin-bottom: 6px;
+}
+
+.mc-card--compact p {
+  font-size: 13.5px;
+}
+
+.platform-list {
+  list-style: none;
+  margin: 34px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.platform-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.platform-list-item > i {
+  flex: none;
+  font-size: 20px;
+  color: var(--sea);
+  margin-top: 3px;
+}
+
+.platform-list-item h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.platform-list-item p {
+  font-size: 14.5px;
+  color: var(--body-text);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 60ch;
+}
+
+@media (max-width: 900px) {
+  .platform-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .platform-list-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.trust-stat {
+  text-align: left;
+  border-left: 2px solid var(--sea);
+  padding-left: 16px;
+}
+
+.trust-figure {
+  font-family: "Fraunces", "Georgia", serif;
+  font-size: 60px;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* Reserved for the Somabay proof point in the Case Study section — the
+   one number on the page that earns a different color from the rest of
+   the (teal-led) system. Not a general-purpose accent; do not reuse
+   --clay elsewhere without deliberate reason. */
+.trust-figure--proof {
+  font-size: 44px;
+  color: var(--clay);
+}
+
+.trust-label {
+  font-size: 15px;
+  color: var(--body-text);
+}
+
+.arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto 0;
+  max-width: 900px;
+}
+
+.arch-node {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 14px 22px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+}
+
+.arch-node--accent {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.arch-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.arch-connector {
+  width: 1px;
+  height: 28px;
+  background: var(--line);
+  margin: 4px 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 36px;
+  margin-top: 34px;
+}
+
+.step-card {
+  text-align: left;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.step-number {
+  display: block;
+  font-family: "Fraunces", "Georgia", serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--sea);
+  margin-bottom: 10px;
+}
+
+.step-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: var(--body-text);
+  line-height: 1.65;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 900px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 7px 14px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .arch-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 64px 0;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .trust-figure {
+    font-size: 44px;
+  }
+}
+
+.navbar-mobile .nav-cta {
+  margin: 15px;
+  justify-content: center;
 }

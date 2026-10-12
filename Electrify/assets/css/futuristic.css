@@ -659,3 +659,13 @@ html.fx .reveal.in.platform-list-item:hover, html.fx .reveal.in.member:hover { t
    downward from the card above (scaleY) instead of sliding. Keeps their 0.55 opacity. */
 html.fx .arch-connector.reveal { transform: scaleY(0); transform-origin: top; }
 html.fx .arch-connector.reveal.in { transform: none; opacity: 0.55; }
+
+/* Platform list: space the stacked cards apart and give them more inner room */
+.platform-list { display: flex; flex-direction: column; gap: 18px; margin-top: 44px; border-top: 0; }
+.platform-list-item { padding: 26px 30px !important; gap: 22px; align-items: flex-start; }
+.platform-list-item h3 { margin: 0 0 8px; }
+.platform-list-item p { margin: 0; line-height: 1.6; }
+@media (max-width: 768px) {
+  .platform-list { gap: 14px; margin-top: 32px; }
+  .platform-list-item { padding: 22px 22px !important; gap: 12px; }
+}

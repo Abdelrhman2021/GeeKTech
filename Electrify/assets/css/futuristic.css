@@ -654,3 +654,8 @@ html.fx .reveal.in.platform-list-item:hover, html.fx .reveal.in.member:hover { t
   #hero .carousel-container { padding-bottom: 88px; }
   #hero .carousel-indicators { margin-bottom: 28px; }
 }
+
+/* Connectors reveal with the same fade/blur/easing/stagger as the cards, drawing
+   downward from the card above (scaleY) instead of sliding. Keeps their 0.55 opacity. */
+html.fx .arch-connector.reveal { transform: scaleY(0); transform-origin: top; }
+html.fx .arch-connector.reveal.in { transform: none; opacity: 0.55; }

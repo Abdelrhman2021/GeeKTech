@@ -33,12 +33,17 @@
   /* ---------- Scroll reveal with stagger ---------- */
   if ("IntersectionObserver" in window) {
     var targets = $(
-      ".section-title, .mc-card, .step-card, .arch-node, .platform-list-item, .trust-stat, .chip-list li, " +
+      ".section-title, .mc-card, .step-card, .arch-node, .arch-connector, .platform-list-item, .trust-stat, .chip-list li, " +
       "#problem ul li, .member, .info, .php-email-form, .cta .container, .portfolio-info, .portfolio-description, " +
       ".breadcrumbs .container, #about .container > *, #ev-iot .container > *",
       true
     );
     var io = new IntersectionObserver(function (entries) {
+      // Diagram nodes + connectors that enter together cascade top-to-bottom in
+      // document order, so each connector lands between the two cards it joins.
+      var arch = entries.filter(function (e) { return e.isIntersecting && e.target.closest(".arch-diagram"); });
+      arch.sort(function (a, b) { return a.target.compareDocumentPosition(b.target) & 4 ? -1 : 1; });
+      arch.forEach(function (e, k) { e.target.style.setProperty("--d", k * 90 + "ms"); });
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
       });

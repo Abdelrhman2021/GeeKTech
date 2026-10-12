@@ -19,8 +19,7 @@
   --b-black: #000;
 
   /* Theme tokens: light-dark(<light>, <dark>) resolves from `color-scheme`, which
-     follows the system setting by default and is forced by html[data-theme]
-     (set by assets/js/theme.js). Hero, CTA band, footer and team cards are
+     follows the visitor's system setting. Hero, CTA band, footer and team cards are
      pinned to dark below because they sit on photos / dark gradients. */
   --fx-bg: light-dark(#f2f7f4, #000);
   --fx-text: light-dark(#0a1a12, #eaf5ef);
@@ -69,8 +68,6 @@
 }
 
 html { scroll-behavior: smooth; color-scheme: light dark; }
-html[data-theme="light"] { color-scheme: light; }
-html[data-theme="dark"] { color-scheme: dark; }
 /* Always-dark surfaces (photo / gradient backed) */
 #hero, .cta, #footer, .member { color-scheme: dark; }
 
@@ -654,27 +651,4 @@ html.fx .reveal.in.platform-list-item:hover, html.fx .reveal.in.member:hover { t
 @media (max-width: 768px) {
   #hero .carousel-container { padding-bottom: 88px; }
   #hero .carousel-indicators { margin-bottom: 28px; }
-}
-
-/*--------------------------------------------------------------
-# Light / dark toggle (button created by assets/js/theme.js)
---------------------------------------------------------------*/
-#header .container { justify-content: flex-start !important; }
-#header .logo { margin-right: auto; }
-.fx-theme-toggle {
-  position: relative; flex: 0 0 auto; width: 42px; height: 42px; margin-left: 14px; padding: 0;
-  border-radius: 50%; border: 1px solid var(--fx-border); background: var(--fx-surface-hi);
-  color: var(--fx-text); cursor: pointer; font-size: 18px; line-height: 1;
-  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-.fx-theme-toggle:hover { border-color: var(--b-green); box-shadow: var(--fx-glow); transform: rotate(-12deg); }
-.fx-theme-toggle:focus-visible { outline: 2px solid var(--b-green); outline-offset: 3px; }
-/* Both icons stacked; colour (not display) swaps with the active scheme so it
-   follows live system changes with no JS. Sun shows in dark, moon in light. */
-.fx-theme-toggle i { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: color 0.3s; }
-.fx-theme-toggle .fx-i-sun { color: light-dark(transparent, var(--b-yellow)); }
-.fx-theme-toggle .fx-i-moon { color: light-dark(var(--b-brown), transparent); }
-@media (max-width: 991px) {
-  .fx-theme-toggle { order: 1; margin: 0 14px 0 0; }
-  #header .container > #navbar { order: 2; }
 }

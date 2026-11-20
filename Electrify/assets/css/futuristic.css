@@ -669,3 +669,23 @@ html.fx .arch-connector.reveal.in { transform: none; opacity: 0.55; }
   .platform-list { gap: 14px; margin-top: 32px; }
   .platform-list-item { padding: 22px 22px !important; gap: 12px; }
 }
+
+/* Platform section: two product screenshots under the cards */
+.platform-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.platform-shot { margin: 0; }
+.platform-shot .dashboard-shot { display: block; }
+.platform-shot .dashboard-shot img { display: block; width: 100%; aspect-ratio: 1800 / 972; object-fit: cover; object-position: top left; }
+.platform-shot figcaption { margin-top: 14px; padding: 0 6px; font-size: 14.5px; line-height: 1.5; color: var(--fx-muted); }
+.platform-shot figcaption strong { color: var(--fx-text); font-weight: 600; }
+@media (max-width: 768px) { .platform-shots { grid-template-columns: 1fr; gap: 20px; } }
+
+/* Demo form: dropdowns, optional markers, spam trap */
+.php-email-form select.form-control {
+  -webkit-appearance: none; appearance: none; cursor: pointer; font-size: 14px; padding-right: 44px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2329b473' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M3 6l5 5 5-5'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important; background-position: right 16px center !important; background-size: 14px 14px !important;
+}
+.php-email-form select.form-control option { background: #0c1512; color: #eaf5ef; }
+.php-email-form select.form-control:invalid { color: light-dark(rgba(10, 26, 18, 0.45), rgba(234, 245, 239, 0.4)) !important; }
+.php-email-form label .optional { font-weight: 400; color: var(--fx-muted); }
+.php-email-form .hp-field { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }

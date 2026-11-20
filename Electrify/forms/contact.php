@@ -22,15 +22,33 @@
     return trim($value);
   }
 
-  $name = isset($_POST['name']) ? clean_header_field($_POST['name']) : '';
-  $email = isset($_POST['email']) ? clean_header_field($_POST['email']) : '';
-  $subject = isset($_POST['subject']) ? clean_header_field($_POST['subject']) : '';
+  // Spam trap: real visitors never see or fill this field. Bots do, so
+  // report success and send nothing.
+  if (!empty($_POST['website'])) {
+    echo "success";
+    exit;
+  }
+
+  function field($key) {
+    return isset($_POST[$key]) ? clean_header_field($_POST[$key]) : '';
+  }
+
+  $name = field('name');
+  $email = field('email');
+  $company = field('company');
+  $job_title = field('job_title');
+  $destination_type = field('destination_type');
+  $fleet_size = field('fleet_size');
+  $timeline = field('timeline');
   $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
-  if ($name === '' || $subject === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  if ($name === '' || $company === '' || $destination_type === '' || $fleet_size === ''
+      || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "error";
     exit;
   }
+
+  $subject = "Demo request: $company ($name)";
 
   $headers = "From: Electrify Website <$sending_email_address>\r\n";
   $headers .= "Reply-To: $email\r\n";
@@ -40,7 +58,14 @@
   // Encoded so non-English (e.g. Arabic) subjects arrive intact.
   $mail_subject = '=?UTF-8?B?' . base64_encode("[Electrify website] $subject") . '?=';
 
-  $email_body = "Name: $name\n\nEmail: $email\n\nSubject: $subject\n\nMessage:\n$message";
+  $email_body = "Name: $name\n"
+    . "Email: $email\n"
+    . "Company / destination: $company\n"
+    . "Job title: " . ($job_title !== '' ? $job_title : '-') . "\n"
+    . "Type of destination: $destination_type\n"
+    . "Current fleet size: $fleet_size\n"
+    . "Expected timeline: " . ($timeline !== '' ? $timeline : '-') . "\n\n"
+    . "Their mobility operation:\n$message";
 
   // -f sets the envelope sender to the same domain mailbox (SPF alignment).
   if (mail($receiving_email_address, $mail_subject, $email_body, $headers, "-f$sending_email_address")) {

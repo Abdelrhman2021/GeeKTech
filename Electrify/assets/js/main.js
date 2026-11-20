@@ -239,3 +239,8 @@
   new PureCounter();
 
 })()
+
+/* Keep the footer copyright year current */
+document.querySelectorAll('.js-year').forEach(function (el) {
+  el.textContent = new Date().getFullYear();
+});
